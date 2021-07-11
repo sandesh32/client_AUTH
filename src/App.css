@@ -13,5 +13,62 @@ li {
 }
 
 body {
+    margin: 5px;
+    background: linear-gradient(45deg, lightblue, lightgreen);
+}
+
+button {
+    background-color: rgb(11, 179, 109);
+    border-color: rgb(11, 179, 109);
+    margin-top: 1em;
+    height: 2em;
+    width: 6em;
+}
+
+input {
+    background-color: aqua;
+    border: 0;
     margin-left: 5px;
+}
+
+a:link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.nav_links a {
+    color: green;
+}
+
+.navbar {
+    background: linear-gradient(15deg, green, pink);
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.sandesh a {
+    font-weight: 700;
+    font-size: xx-large;
+    color: rgb(101, 151, 76);
+    padding-left: 5px;
+}
+
+.horline {
+    font-weight: 700;
+    font-size: larger;
+    margin-right: 8px;
+    margin-top: -1px;
+    color: rgb(49, 170, 49);
+}
+
+a:hover {
+    color: rgb(49, 170, 49);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(80, 177, 72);
+    border-color: rgb(80, 177, 72);
 }
