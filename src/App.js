@@ -23,6 +23,7 @@ function App() {
   <Nav/>
     <Switch>
       <Route exact path="/" render={()=>{
+        if(localStorage.getItem('token')){
           return ( <div>
             <br />
             <br />
@@ -32,12 +33,20 @@ function App() {
             {details}
             </div>
           );
+        }
+        else{
+          return(
+            <div>
+              You must login to view this page.
+            </div>
+          )
+        }
       }}>
       </Route>
       <Route exact path="/login">
         <Login/>
       </Route>
-      <Route exact path="/logout">
+      <Route exact path="/logout" onClick={console.log("logged out")}>
         <Logout/>
       </Route>
       <Route exact path="/signup">

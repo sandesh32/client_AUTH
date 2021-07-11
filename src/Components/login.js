@@ -27,17 +27,29 @@ export default function Login() {
          localStorage.setItem("token",result.token);
          })
     };
-    return (
-        <div>
-            <form>
-            <label htmlFor="email">E-mail:</label>
-            <input type="email" id="email" name="email" value={email} onChange={changeValueEmail} placeholder="sanjal@gmail.com" required />
-            <br />
-            <label htmlFor="password">Password:</label>
-            <input type="password" id="password" name="password" value={password} onChange={changeValuePassword} placeholder="********" required />
-            <br />
-            <button onClick={postData}>Login</button>
-            </form>
-        </div>
-    )
+    if(!localStorage.getItem("token")){
+        return (
+            <div>
+                <form>
+                <label htmlFor="email">E-mail:</label>
+                <input type="email" id="email" name="email" value={email} onChange={changeValueEmail} placeholder="sanjal@gmail.com" required />
+                <br />
+                <label htmlFor="password">Password:</label>
+                <input type="password" id="password" name="password" value={password} onChange={changeValuePassword} placeholder="********" required />
+                <br />
+                <button onClick={postData}>Login</button>
+                </form>
+            </div>
+            )
+        }
+    else{
+        return(
+            <div>
+                You are logged in. 
+                <br />
+                If you wish to login with a different account, kindly logout and login again.
+            </div>
+        )
+    }
+        
 }
